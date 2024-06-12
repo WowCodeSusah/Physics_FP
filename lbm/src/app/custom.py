@@ -46,7 +46,7 @@ class custom(base_app):
         # Obstacles
         global obstacless
         root = tk.Tk()
-        root.title("Paint Application")
+        root.title("Fluid Dynamic Application")
         PaintApp(root)
         root.mainloop()
 
