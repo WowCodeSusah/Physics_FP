@@ -15,7 +15,7 @@ def run(lattice, app):
     # Initialize fields and distributions
     app.initialize(lattice)
 
-    date = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
+    date = datetime.now().strftime('%Y-%m-%d_%H_%M')
 
     # Timer and loop data
     start_time = time.time()

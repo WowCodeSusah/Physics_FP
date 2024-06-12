@@ -78,7 +78,7 @@ class lattice:
         if hasattr(app, "obs_cv_nb"): self.obs_cv_nb = app.obs_cv_nb
 
         # Output dirs
-        time             = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
+        time             = datetime.now().strftime('%Y-%m-%d_%H_%M')
         self.results_dir = './results/'
         self.output_dir  = self.results_dir+str(time)+'/'
         self.png_dir     = self.output_dir+'./png/'
