@@ -39,8 +39,8 @@ class custom(base_app):
         self.compute_lbm_parameters()
 
         # Obstacles
-        self.obstaclesBeta = [['Canvas', 'cylinder', 0.24, [0.9825, -0.4325]], ['Canvas', 'cylinder',  0.24, [1.51, -0.4025]], ['Canvas', 'square',  0.24, [1.1875, 0.7025]], 
-                              ['Canvas', 'square', 0.1, [1.5925, -0.205]], ['Canvas', 'square',  0.1, [0.5275, -0.5625]]]
+        self.obstaclesBeta = [['Canvas', 'cylinder', 0.24, [0.4525, 0.215]], ['Canvas', 'cylinder', 0.24, [0.6375, -0.0275]], ['Canvas', 'cylinder', 0.24, [1.295, 0.355]], ['Canvas', 'cylinder', 0.24, [1.695, 0.0275]], 
+                              ['Canvas', 'cylinder', 0.24, [1.5125, -0.13]], ['Canvas', 'cylinder', 0.24, [1.145, -0.135]]]
         self.n_obs       = len(self.obstaclesBeta)
         self.obstacles = []
         for i in self.obstaclesBeta:
