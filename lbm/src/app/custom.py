@@ -33,6 +33,7 @@ class custom(base_app):
         self.obs_cv_ct   = 1.0e-3
         self.obs_cv_nb   = 1000
         self.r_obs       = 0.1
+        self.obstacless = PaintApp.get_obstabless()
 
         # Output parameters
         self.output_freq = 500
@@ -49,7 +50,7 @@ class custom(base_app):
         PaintApp(root)
         root.mainloop()
 
-        self.obstaclesBeta = obstacless
+        self.obstaclesBeta = PaintApp.get_obstabless()
         self.n_obs       = len(self.obstaclesBeta)
         self.obstacles = []
         for i in self.obstaclesBeta:

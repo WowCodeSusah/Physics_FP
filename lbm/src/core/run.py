@@ -5,6 +5,7 @@ import time
 # Custom imports
 from lbm.src.app.app      import *
 from lbm.src.core.lattice import *
+from gifgenerator import gif_generate
 
 ########################
 # Run lbm simulation
@@ -13,6 +14,8 @@ def run(lattice, app):
 
     # Initialize fields and distributions
     app.initialize(lattice)
+
+    date = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
 
     # Timer and loop data
     start_time = time.time()
@@ -59,4 +62,6 @@ def run(lattice, app):
 
     # Perform final operations and outputs
     app.finalize(lattice)
+
+    gif_generate(date)
 

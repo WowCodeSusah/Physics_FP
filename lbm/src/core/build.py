@@ -101,7 +101,7 @@ class PaintApp():
                         new_y = -(event.y - 200)
                     elif event.y < 200: 
                         new_y = abs(event.y - 200)    
-                    self.obstacle.append(['Canvas', 'cylinder', self.selected_size / 100 , [event.x /400 , new_y /400]])
+                    self.obstacle.append(['Canvas', 'cylinder', self.selected_size / 100 , [event.x /350 , new_y /350]])
                 elif self.selected_pen_type == "square":
                     x1 = event.x - self.selected_size
                     y1 = event.y - self.selected_size
@@ -113,17 +113,19 @@ class PaintApp():
                     elif event.y < 200: 
                         new_y = abs(event.y - 200)
                     self.canvas.create_rectangle(x1, y1, x2, y2, fill=self.selected_color, outline=self.selected_color)
-                    self.obstacle.append(['Canvas', 'square', self.selected_size / 100, [event.x /400 , new_y /400]])
+                    self.obstacle.append(['Canvas', 'square', self.selected_size / 100, [event.x /350 , new_y /350]])
 
     def clear_canvas(self):
         self.canvas.delete("all")
+
+    def get_obstabless():
+        return obstacless
 
     def plot_fluid(self):
         print(self.obstacle)
         global obstacless 
         obstacless = self.obstacle
         self.root.quit
-
 
     def undo(self):
         items = self.canvas.find_all()
