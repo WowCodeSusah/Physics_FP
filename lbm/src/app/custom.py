@@ -8,13 +8,17 @@ from lbm.src.core.obstacle import *
 from lbm.src.utils.buff    import *
 from lbm.src.plot.plot     import *
 
+from lbm.src.core.build import *
+import tkinter as tk
+from tkinter import ttk
+
 ###############################################
 ### Array of square obstacles
 class custom(base_app):
     def __init__(self):
 
         # Free arguments
-        self.name        = 'array'
+        self.name        = 'custom'
         self.Re_lbm      = 2000.0
         self.L_lbm       = 200
         self.u_lbm       = 0.025
@@ -39,8 +43,13 @@ class custom(base_app):
         self.compute_lbm_parameters()
 
         # Obstacles
-        self.obstaclesBeta = [['Canvas', 'cylinder', 0.24, [0.4525, 0.215]], ['Canvas', 'cylinder', 0.24, [0.6375, -0.0275]], ['Canvas', 'cylinder', 0.24, [1.295, 0.355]], ['Canvas', 'cylinder', 0.24, [1.695, 0.0275]], 
-                              ['Canvas', 'cylinder', 0.24, [1.5125, -0.13]], ['Canvas', 'cylinder', 0.24, [1.145, -0.135]]]
+        global obstacless
+        root = tk.Tk()
+        root.title("Paint Application")
+        PaintApp(root)
+        root.mainloop()
+
+        self.obstaclesBeta = obstacless
         self.n_obs       = len(self.obstaclesBeta)
         self.obstacles = []
         for i in self.obstaclesBeta:

@@ -1,7 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
-class PaintApp:
+obstacless = []
+
+class PaintApp():
     def __init__(self, root):
         self.root = root
         self.canvas_width = 1000
@@ -118,11 +120,18 @@ class PaintApp:
 
     def plot_fluid(self):
         print(self.obstacle)
+        global obstacless 
+        obstacless = self.obstacle
+        self.root.quit
+
 
     def undo(self):
         items = self.canvas.find_all()
         if items:
             self.canvas.delete(items[-1])
+
+    def obs(self):
+        return self.obstacle
 
 if __name__ == "__main__":
     root = tk.Tk()
